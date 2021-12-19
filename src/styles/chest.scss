@@ -1,0 +1,40 @@
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content:  left;
+    align-items: center;
+
+    margin: 0 0 4rem -2rem;
+
+    img {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 0.5rem;
+        background: #fff;
+        border-radius: 45%;
+        padding: 3px;
+    }
+
+    input {
+        width: 485px;
+        height: 37px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-style: italic;
+        padding: 1rem;
+
+        border-radius: 10px;
+        border: 0.1px solid;
+    }
+}
+
+.main {
+    padding: 2rem 0 0 5rem;
+}
+
+.content-chest {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

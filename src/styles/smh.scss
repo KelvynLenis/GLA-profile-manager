@@ -1,0 +1,112 @@
+// #root {
+//     max-width: 1366px;
+//     height: 100vh;
+//     background: url('/assets/bg.jpg') no-repeat scroll;
+// }
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content:  left;
+    align-items: center;
+
+    margin: 0 0 4rem -2rem;
+
+    img {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 0.5rem;
+        background: #fff;
+        border-radius: 45%;
+        padding: 3px;
+    }
+
+    input {
+        width: 485px;
+        height: 37px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-style: italic;
+        padding: 1rem;
+
+        border-radius: 10px;
+        border: 0.1px solid;
+    }
+}
+
+main {
+    padding: 3rem 15rem;
+}
+
+.content-smh {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    img {
+        width: 214px;
+        height: 97px;
+    }
+
+    .smh-pop-up {
+        width: 212px;
+        height: 95px;
+
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+
+        margin: 0 0 -15rem 0;
+        
+
+        span {
+            visibility: hidden;
+        }
+    }
+
+    .smh-pop-up:hover {
+        width: 212px;
+        height: 95px;
+        
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba($color: #262626a9, $alpha: 0.6);
+
+        position: fixed;
+        margin: 0 0 -15rem 0;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+
+        transition: 0.4s;
+
+        span:first-of-type {
+            visibility: visible;
+            color: rgb(0, 228, 19);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(0, 180, 9, 0.541);
+
+            margin: 0;
+        }
+
+        span:nth-child(2) {
+            visibility: visible;
+            color: rgb(236, 28, 0);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(165, 0, 0, 0.507);
+
+        }
+        
+    }
+
+    .smh{
+        display: flex;
+    }
+
+}
