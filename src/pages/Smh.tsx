@@ -12,10 +12,6 @@ export function Smh(){
 				<Header />
 			</header>
 
-			<aside>
-				<Sidebar />
-			</aside>
-
             <main>
                 <div className="search-box">
                         <img src="/assets/search.svg" alt="search icon" />

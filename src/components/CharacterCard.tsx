@@ -2,15 +2,17 @@ import '../styles/character-card.scss';
 import { avatarUrlList } from '../utils/avatarUrlList';
 import { charClass } from '../utils/classUrlList';
 import { tierList } from '../utils/tierList';
+import { ICharacter } from './Characters';
 import { RatingStar } from './RatingStar';
 
 type characterProps = {
     name: string;
-    tier: string;
+    char: ICharacter;
+    deleteChar(charNameToDelete: string): void;
 }
 
 export function CharacterCard(props:characterProps) {
-    const tier = props.tier;
+    const tier = tierList[props.name];
 
     // function handleCursos() {
     //     var tooltip = document.querySelectorAll('.coupontooltip');
@@ -32,7 +34,12 @@ export function CharacterCard(props:characterProps) {
                 { tier.includes("2") && <span className='tier2'>Tier {props.tier}</span>}
                 { tier.includes("3") && <span className='tier3'>Tier {props.tier}</span>}
                 { tier.includes("4") && <span className='tier4'>Tier {props.tier}</span>}
-                <button className='delete'>X</button>
+                <button 
+                className='delete'
+                onClick={() => {
+                    props.deleteChar(props.char.charName)
+                }}
+                >X</button>
             </div>
             
             <span>{props.name}</span>
