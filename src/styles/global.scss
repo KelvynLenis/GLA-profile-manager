@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    z-index: 0;
+}
+
 body {
     max-width: 1366px;
     max-height: 722px;

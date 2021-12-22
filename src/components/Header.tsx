@@ -1,13 +1,16 @@
 import '../styles/header.scss';
+import { Sidebar } from './Sidebar';
 
 export function Header() {
     return(
         <>
             <div className="header">
                 <div className="leftside">
+                    <Sidebar />
                     <img src="/assets/sunny.png" alt="sunny logo" />
                     <span>GLA Profile Manager</span>
                 </div>
+
 
                 <div className="rightside">
                     <a href="https://wiki.gla.com.br/" target="_blank">

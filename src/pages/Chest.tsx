@@ -13,8 +13,6 @@ export function Chest(){
 				<Header />
 			</header>
 
-			<Sidebar />
-
             <main className="main">
                 <div className="search-box">
                         <img src="/assets/search.svg" alt="search icon" />

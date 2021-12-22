@@ -12,8 +12,6 @@ export function Profile() {
 				<Header />
 			</header>
 
-			<Sidebar />
-
             <main>
                 <ProfileCard />
             </main>
