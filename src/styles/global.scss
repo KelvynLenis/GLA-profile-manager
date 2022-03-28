@@ -20,6 +20,10 @@ body {
     background: url('/assets/bg.jpg') fixed;
 }
 
+ul {
+    list-style: none;
+}
+
 button{
     transition: filter 0.4s;
 }
