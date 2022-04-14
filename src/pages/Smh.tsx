@@ -1,10 +1,13 @@
 import { Header } from "../components/Header";
+import { useState } from "react";
 import { Sidebar } from "../components/Sidebar";
 import { smhUrlList } from '../utils/smhUrlList';
 
 import '../styles/smh.scss';
 
 export function Smh(){
+    
+    
     return (
         <>
             <title>GLA Profile Manager</title>
@@ -20,12 +23,28 @@ export function Smh(){
                 <div className="content-smh">
 
                 {Object.keys(smhUrlList).map((smh, url) => {
+                    const [done, setDone] = useState(0);
+                    const [lose, setLose] = useState(0);
+                
+                    function incrementDones() {
+                        setDone(done+1);
+                    }
+                
+                    function incrementLoses() {
+                        setLose(lose+1);
+                    }
                         return (
                             <div className="smh">
                                 <img src={smhUrlList[smh]} alt={smh} />
                                 <div className="smh-pop-up">
-                                    <span>Win: 0</span>
-                                    <span>Lose: 0</span>
+                                    <div>
+                                        <span>Win: {done}</span>
+                                        <button onClick={incrementDones}>+</button>
+                                    </div>
+                                    <div>
+                                        <span>Lose: {lose}</span>
+                                        <button onClick={incrementLoses}>+</button>
+                                    </div>
                                 </div>
                             </div>
                         );
