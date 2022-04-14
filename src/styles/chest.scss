@@ -1,40 +1,46 @@
-.search-box {
-    display: flex;
-    flex-direction: row;
-    justify-content:  left;
-    align-items: center;
-
-    margin: 0 0 4rem -2rem;
-
-    img {
-        width: 40px;
-        height: 40px;
-
-        margin-right: 0.5rem;
-        background: #fff;
-        border-radius: 45%;
-        padding: 3px;
-    }
-
-    input {
-        width: 485px;
-        height: 37px;
-
-        font-family: 'Roboto', sans-serif;
-        font-size: 22px;
-        font-style: italic;
-        padding: 1rem;
-
-        border-radius: 10px;
-        border: 0.1px solid;
-    }
-}
-
 .main {
-    padding: 2rem 0 0 5rem;
+  padding: 2rem 0 0 5rem;
 }
 
 .content-chest {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  align-items: center;
+  margin-top: 1rem;
+  padding-left: 2rem;
+
+}
+
+@media screen and (min-width: 800px) {
+  .content-chest{
+    grid-template-columns: repeat(2, 1fr);
+  
+    padding-left: 6rem;
+  }
+  
+}
+
+@media screen and (min-width: 1120px) {
+  .content-chest{
+    grid-template-columns: repeat(3, 1fr);
+  
+    padding-left: 5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .content-chest{
     grid-template-columns: repeat(4, 1fr);
+  
+    padding-left: 5rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .content-chest{
+    grid-template-columns: repeat(5, 1fr);
+  
+    padding-left: 5rem;
+  }
 }

@@ -9,13 +9,12 @@ export function Sidebar() {
                 <ul className='sidebar'>
                     <li>
                         <Link to="/smh" className='Link'><button>SMH</button></Link>
+                    </li>
+                    <li>
                         <Link to="/chest" className='Link'><button>Chest</button></Link>
+                    </li>
+                    <li>
                         <Link to="/" className='Link'><button>Char</button></Link>
-                        <Link to="/profile" className='Link'><button>Profile</button></Link>
-                        {/* <button>SMH</button>
-                        <button>Char</button>
-                        <button>Chest</button>
-                        <button>Profile</button> */}
                     </li>
                 </ul>
             </div>
