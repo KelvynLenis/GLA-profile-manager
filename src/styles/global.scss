@@ -1,33 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
-.background {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    position: fixed;
-    z-index: 0;
+*, input, button {
+	font-family: 'Roboto', sans-serif;
 }
 
 body {
-    max-width: 1366px;
-    max-height: 722px;
-    margin: 0;
-
-    background: url('/assets/bg.jpg') fixed;
+	width: fit-content;
+	height: 100%;
+	background: url('/assets/bg.jpg') no-repeat fixed center;
 }
 
 ul {
-    list-style: none;
-}
-
-button{
-    transition: filter 0.4s;
-}
-
-button:hover {
-    filter: brightness(1.1);
+	list-style: none;
 }

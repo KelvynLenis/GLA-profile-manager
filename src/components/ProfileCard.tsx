@@ -4,14 +4,14 @@ export function ProfileCard() {
     return(
         <>
             <div className="profile">
-                <div className="right">
+                <div className="left">
                     <div className="outer-border">
                         <div className="inner-border">
                             <img src="https://i.pinimg.com/originals/b2/ef/44/b2ef44389be779bae4926207c2cba632.jpg" alt="zoro" />
                         </div>
                     </div>
                 </div>
-                <div className="left">
+                <div className="right">
                     <span>Nível da tripulação 0</span>
                     <span>Estrelas da tripulação 0</span>
                     <span>Nível do navio 0</span>

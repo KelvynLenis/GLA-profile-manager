@@ -1,112 +1,135 @@
-// #root {
-//     max-width: 1366px;
-//     height: 100vh;
-//     background: url('/assets/bg.jpg') no-repeat scroll;
-// }
-
 .search-box {
-    display: flex;
-    flex-direction: row;
-    justify-content:  left;
-    align-items: center;
+  width: 70%;
 
-    margin: 0 0 4rem -2rem;
-
-    img {
-        width: 40px;
-        height: 40px;
-
-        margin-right: 0.5rem;
-        background: #fff;
-        border-radius: 45%;
-        padding: 3px;
-    }
-
-    input {
-        width: 485px;
-        height: 37px;
-
-        font-family: 'Roboto', sans-serif;
-        font-size: 22px;
-        font-style: italic;
-        padding: 1rem;
-
-        border-radius: 10px;
-        border: 0.1px solid;
-    }
-}
-
-main {
-    padding: 3rem 15rem;
+  input {
+    max-width: 450px;
+  }
 }
 
 .content-smh {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  margin: 4rem;
+  position: relative;
 
-    img {
-        width: 214px;
-        height: 97px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  
+  padding: 0 0 0 1rem;
+
+  .smh-pop-up {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    // margin: 0 0 -15rem 0;
+    
+    span {
+        visibility: hidden;
+    }
+  }
+
+  .smh-pop-up:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba($color: #262626a9, $alpha: 0.6);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+    transition: 0.4s;
+
+    span:first-of-type {
+      visibility: visible;
+      color: rgb(0, 228, 19);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(0, 180, 9, 0.541);
+
+      margin: 0;
     }
 
-    .smh-pop-up {
-        width: 212px;
-        height: 95px;
+    span:nth-child(2) {
+      visibility: visible;
+      color: rgb(236, 28, 0);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(165, 0, 0, 0.507);
 
-        display: flex;
-        flex-direction: column;
+    }  
+  }
 
-        position: fixed;
+  .smh{
+      display: flex;
+      position: relative;
+      align-self: center;
 
-        margin: 0 0 -15rem 0;
-        
+      padding-left: 0rem;
 
-        span {
-            visibility: hidden;
-        }
-    }
+      img {
+        width: 100%;
+      }
+  }
 
-    .smh-pop-up:hover {
-        width: 212px;
-        height: 95px;
-        
+}
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media screen and (max-width: 500px) {
+  .smh {
+    width: 90%;
+    align-items: center;
+  } 
 
-        background: rgba($color: #262626a9, $alpha: 0.6);
+  .search-box {
+    margin-top: 2rem;
+    width: 65%;
+  }
+}
 
-        position: fixed;
-        margin: 0 0 -15rem 0;
 
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
+@media screen and (max-width: 100px) {
+  .smh {
+    width: 30%;
+    align-items: center;
+  }  
+}
 
-        transition: 0.4s;
 
-        span:first-of-type {
-            visibility: visible;
-            color: rgb(0, 228, 19);
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: rgba(0, 180, 9, 0.541);
 
-            margin: 0;
-        }
+@media screen and (min-width: 701px) {
+  .content-smh {
+      margin-left: 5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+  }
 
-        span:nth-child(2) {
-            visibility: visible;
-            color: rgb(236, 28, 0);
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: rgba(165, 0, 0, 0.507);
+  .smh {
+    width: 110%;
+  }
 
-        }
-        
-    }
+  .search-box {
+    padding-left: 1rem;
+  }
+}
 
-    .smh{
-        display: flex;
-    }
+@media screen and (min-width: 900px) {
+  .content-smh {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-smh {
+      margin-left: 10rem;
+
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+  }
 
 }

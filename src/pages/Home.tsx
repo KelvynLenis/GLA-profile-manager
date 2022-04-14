@@ -1,8 +1,8 @@
 import { Header } from "../components/Header";
-import { Dropdown } from 'reactjs-dropdown-component';
 
 import '../styles/home.scss';
 import { Characters } from "../components/Characters";
+import { ProfileCard } from "../components/ProfileCard";
 
 
 export function Home(){
@@ -13,6 +13,8 @@ export function Home(){
 			<header>
 				<Header />
 			</header>
+
+			<ProfileCard />
 	
 			<Characters />
 		</>
